@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missions - Space Odyssey</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-top" style="background: url('images/header-background.jpg') center/contain;">
+            <div class="logo">
+                <div class="logo-icon">
+                    <img src="web images/logo.png" alt="Space Odyssey Logo" style="width: 222px; height: 40px;">
+                </div>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Search...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="header-actions">
+                <select name="language" id="lng">
+                    <option value="french">Français</option>
+                    <option value="english">English</option>
+                    <option value="arab">العربية</option>
+                </select>
+                <button class="icon-btn"><i class="fas fa-bell"></i></button>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="planets.html">PLANETS</a></li>
+                <li><a href="missions.html">MISSIONS</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+            </ul>
+            <button class="contact-btn" onclick="window.location.href='contact.html'">Contact Us</button>
+        </nav>
+    </header>
+
+
+    <!-- Contact Section -->
+    <main class="contact-page">
+        <div class="contact-wrapper">
+            <div class="contact-box">
+                <!-- Left Side -->
+                <div class="contact-left">
+                    <h2>Contact Us</h2>
+                    <p class="subtitle">Any question or remarks? Just write us a message!</p>
+                    
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+012 3456 789</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>demo@gmail.com</span>
+                        </div>
+                    </div>
+
+                    <div class="planet-bg">
+                        <svg width="180" height="180" viewBox="0 0 200 200">
+                            <circle cx="100" cy="100" r="70" fill="#d4764a" opacity="0.4"/>
+                        </svg>
+                    </div>
+
+                    <div class="social-buttons">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+
+                <!-- Right Side -->
+                <div class="contact-right">
+                    <form id="contactForm">
+                        <div class="form-row-2">
+                            <div class="form-field">
+                                <label>First Name</label>
+                                <input type="text" id="firstname" required>
+                            </div>
+                            <div class="form-field">
+                                <label>Last Name</label>
+                                <input type="text" id="lastname" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row-2">
+                            <div class="form-field">
+                                <label>Email</label>
+                                <input type="email" id="email" required>
+                            </div>
+                            <div class="form-field">
+                                <label>Phone Number</label>
+                                <input type="tel" id="phone" required>
+                            </div>
+                        </div>
+
+                        <div class="form-field">
+                            <label>Select Subject?</label>
+                            <div class="radio-options">
+                                <label><input type="radio" name="subject" value="general" checked> <span>General Inquiry</span></label>
+                                <label><input type="radio" name="subject" value="planet"> <span>Planet Inquiry</span></label>
+                                <label><input type="radio" name="subject" value="general2"> <span>General Inquiry</span></label>
+                                <label><input type="radio" name="subject" value="other"> <span>Other Inquiry</span></label>
+                            </div>
+                        </div>
+
+                        <div class="form-field">
+                            <label>Message</label>
+                            <textarea id="message" rows="3" placeholder="Write your message..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="send-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Methods -->
+        <div class="contact-methods">
+            <div class="method-box">
+                <i class="fas fa-envelope"></i>
+                <h3>Email</h3>
+                <p>Our friendly team is here to help. Feel free to ask us about our work or share any inquiries, ideas and work with your questions.</p>
+                <a href="mailto:contact@charleshopikins.com">Click Here ></a>
+            </div>
+            <div class="method-box">
+                <i class="fas fa-comments"></i>
+                <h3>Live Chat</h3>
+                <p>Connect in real-time with our staff for immediate assistance. Send us your questions. We'd love to help you!</p>
+                <a href="#">Click Here ></a>
+            </div>
+            <div class="method-box">
+                <i class="fas fa-phone"></i>
+                <h3>Phone</h3>
+                <p>Talk to our team to communicate assistance via video call or by calling. We are inquiring & support you need.</p>
+                <p class="phone">+9102216488</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-top">
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Important</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">Career</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Subscribe</h4>
+                <div class="subscribe">
+                    <input type="email" placeholder="Email address">
+                    <button><i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-logo">
+                <span>All Rights Reserved 2024</span>
+            </div>
+            <div class="footer-links">
+                <a href="#">Terms</a>
+                <a href="#">Privacy</a>
+                <a href="#">Cookies</a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

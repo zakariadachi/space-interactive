@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missions - Space Odyssey</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-top" style="background: url('images/header-background.jpg') center/contain;">
+            <div class="logo">
+                <div class="logo-icon">
+                    <img src="web images/logo.png" alt="Space Odyssey Logo" style="width: 222px; height: 40px;">
+                </div>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Search...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="header-actions">
+                <select name="language" id="lng">
+                    <option value="french">Français</option>
+                    <option value="english">English</option>
+                    <option value="arab">العربية</option>
+                </select>
+                <button class="icon-btn"><i class="fas fa-bell"></i></button>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="planets.html" class="active">PLANETS</a></li>
+                <li><a href="missions.html">MISSIONS</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+            </ul>
+            <button class="contact-btn" onclick="window.location.href='contact.html'">Contact Us</button>
+        </nav>
+    </header>
+
+    <!-- Planets Hero Section -->
+    <section class="planets-hero" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), 
+                url('web images/pla.png') center/cover;">
+        <div class="hero-content">
+            <h1>Planets</h1>
+            <p>Explore our comprehensive guide of the solar system, from inner terrestrial planets to outer gas giants and distant dwarf planets. Discover the unique characteristics that make each celestial body extraordinary.</p>
+            <button class="hero-btn">Read More</button>
+        </div>
+    </section>
+
+    <!-- Planets Grid -->
+    <section class="planets-grid-section">
+        <div class="planets-container">
+            <!-- Mercury -->
+            <div class="planet-card">
+                <div class="planet-image">
+                    <img src="web images/mercure.jpg" alt="Mercury">
+                </div>
+                <div class="planet-info">
+                    <h3>MERCURE</h3>
+                    <p>Mercury is the smallest planet in the solar system and the closest to the Sun. Its surface is heavily cratered and resembles Earth's Moon.</p>
+                    <ul class="planet-stats">
+                        <li><strong>Moons:</strong> 0</li>
+                        <li><strong>Distance from Sun:</strong> 57.9 million km</li>
+                        <li><strong>Day:</strong> 59 Earth days</li>
+                        <li><strong>Year:</strong> 88 Earth days</li>
+                    </ul>
+                    <a href="#" class="planet-link">Read More</a>
+                </div>
+            </div>
+
+            <!-- Venus -->
+            <div class="planet-card">
+                <div class="planet-image">
+                    <img src="web images/venus.jpg" alt="Venus">
+                </div>
+                <div class="planet-info">
+                    <h3>VENUS</h3>
+                    <p>Venus is the second planet from the Sun and Earth's closest planetary neighbor. It's the hottest planet in our solar system with thick clouds of sulfuric acid.</p>
+                    <ul class="planet-stats">
+                        <li><strong>Moons:</strong> 0</li>
+                        <li><strong>Distance from Sun:</strong> 108.2 million km</li>
+                        <li><strong>Day:</strong> 243 Earth days</li>
+                        <li><strong>Year:</strong> 225 Earth days</li>
+                    </ul>
+                    <a href="#" class="planet-link">Read More</a>
+                </div>
+            </div>
+
+            <!-- Mars -->
+            <div class="planet-card">
+                <div class="planet-image">
+                    <img src="web images/mars.jpg" alt="Mars">
+                </div>
+                <div class="planet-info">
+                    <h3>MARS</h3>
+                    <p>Mars is the fourth planet from the Sun, known as the Red Planet due to iron oxide on its surface. It has the largest volcano and canyon in the solar system.</p>
+                    <ul class="planet-stats">
+                        <li><strong>Moons:</strong> 2</li>
+                        <li><strong>Distance from Sun:</strong> 227.9 million km</li>
+                        <li><strong>Day:</strong> 24.6 hours</li>
+                        <li><strong>Year:</strong> 687 Earth days</li>
+                    </ul>
+                    <a href="#" class="planet-link">Read More</a>
+                </div>
+            </div>
+
+            <!-- Jupiter -->
+            <div class="planet-card">
+                <div class="planet-image">
+                    <img src="web images/jupiter.webp" alt="Jupiter">
+                </div>
+                <div class="planet-info">
+                    <h3>JUPITER</h3>
+                    <p>Jupiter is the largest planet in our solar system. It's a gas giant with colorful clouds and a Great Red Spot—a giant storm larger than Earth.</p>
+                    <ul class="planet-stats">
+                        <li><strong>Moons:</strong> 95</li>
+                        <li><strong>Distance from Sun:</strong> 778.5 million km</li>
+                        <li><strong>Day:</strong> 10 hours</li>
+                        <li><strong>Year:</strong> 12 Earth years</li>
+                    </ul>
+                    <a href="#" class="planet-link">Read More</a>
+                </div>
+            </div>
+
+            <!-- Saturn -->
+            <div class="planet-card">
+                <div class="planet-image">
+                    <img src="web images/saturn.webp" alt="Saturn">
+                </div>
+                <div class="planet-info">
+                    <h3>SATURN</h3>
+                    <p>Saturn is the sixth planet from the Sun and famous for its spectacular ring system. It's a gas giant composed mostly of hydrogen and helium.</p>
+                    <ul class="planet-stats">
+                        <li><strong>Moons::</strong> 146</li>
+                        <li><strong>Distance from Sun:</strong> 1.4 billion km</li>
+                        <li><strong>Day:</strong> 10.7 hours</li>
+                        <li><strong>Year:</strong> 29 Earth years</li>
+                    </ul>
+                    <a href="#" class="planet-link">Read More</a>
+                </div>
+            </div>
+
+            <!-- Uranus -->
+            <div class="planet-card">
+                <div class="planet-image">
+                    <img src="web images/uranus.webp" alt="Uranus">
+                </div>
+                <div class="planet-info">
+                    <h3>URANUS</h3>
+                    <p>Uranus is an ice giant that rotates on its side. Its unusual tilt makes it appear to roll along its orbital path around the Sun.</p>
+                    <ul class="planet-stats">
+                        <li><strong>Moons:</strong> 27</li>
+                        <li><strong>Distance from Sun:</strong> 2.9 billion km</li>
+                        <li><strong>Day:</strong> 17 hours</li>
+                        <li><strong>Year:</strong> 84 Earth years</li>
+                    </ul>
+                    <a href="#" class="planet-link">Read More</a>
+                </div>
+            </div>
+
+            <!-- Neptune -->
+            <div class="planet-card">
+                <div class="planet-image">
+                    <img src="web images/neptune.jpg" alt="Neptune">
+                </div>
+                <div class="planet-info">
+                    <h3>NEPTUNE</h3>
+                    <p>Neptune is the eighth and farthest known planet from the Sun. It's a dark, cold, and very windy ice giant with supersonic winds.</p>
+                    <ul class="planet-stats">
+                        <li><strong>Moons::</strong> 14</li>
+                        <li><strong>Distance from Sun:</strong> 4.5 billion km</li>
+                        <li><strong>Day:</strong> 16 hours</li>
+                        <li><strong>Year:</strong> 165 Earth years</li>
+                    </ul>
+                    <a href="#" class="planet-link">Read More</a>
+                </div>
+            </div>
+
+            <!-- Pluto -->
+            <div class="planet-card">
+                <div class="planet-image">
+                    <img src="web images/pluton.jpg" alt="Pluto">
+                </div>
+                <div class="planet-info">
+                    <h3>PLUTON</h3>
+                    <p>Pluto is a dwarf planet in the Kuiper Belt. It was once considered the ninth planet but was reclassified in 2006. It has a heart-shaped glacier.</p>
+                    <ul class="planet-stats">
+                        <li><strong>Moons:</strong> 5</li>
+                        <li><strong>Distance from Sun:</strong> 5.9 billion km</li>
+                        <li><strong>Day:</strong> 6.4 Earth days</li>
+                        <li><strong>Year:</strong> 248 Earth years</li>
+                    </ul>
+                    <a href="#" class="planet-link">Read More</a>
+                </div>
+            </div>
+
+            <!-- Haumea -->
+            <div class="planet-card">
+                <div class="planet-image">
+                    <img src="web images/haumea.jpg" alt="Haumea">
+                </div>
+                <div class="planet-info">
+                    <h3>HAUMEA</h3>
+                    <p>Haumea is an elongated dwarf planet located in the Kuiper Belt. Its rapid rotation causes its unusual oval shape and it has two known moons.</p>
+                    <ul class="planet-stats">
+                        <li><strong>Moons:</strong> 1</li>
+                        <li><strong>Distance from Sun:</strong> 6.5 billion km</li>
+                        <li><strong>Day:</strong> 4 hours</li>
+                        <li><strong>Year:</strong> 284 Earth years</li>
+                    </ul>
+                    <a href="#" class="planet-link">Read More</a>
+                </div>
+            </div>
+
+            <!-- Makemake -->
+            <div class="planet-card">
+                <div class="planet-image">
+                    <img src="web images/makemake.webp" alt="Makemake">
+                </div>
+                <div class="planet-info">
+                    <h3>MAKEMAKE</h3>
+                    <p>Makemake is a dwarf planet in the Kuiper Belt. Its surface is covered with frozen methane, ethane, and possibly nitrogen, giving it a bright appearance.</p>
+                    <ul class="planet-stats">
+                        <li><strong>Moons:</strong> 1 </li>
+                        <li><strong>Distance from Sun:</strong> 6.8 billion km</li>
+                        <li><strong>Day:</strong> 22.5 hours</li>
+                        <li><strong>Year:</strong> 305 Earth years</li>
+                    </ul>
+                    <a href="#" class="planet-link">Read More</a>
+                </div>
+            </div>
+
+            <!-- Ceres -->
+            <div class="planet-card">
+                <div class="planet-image">
+                    <img src="web images/ceres.webp" alt="Makemake">
+                </div>
+                <div class="planet-info">
+                    <h3>Ceres</h3>
+                    <p>Ceres is a dwarf planet in the Kuiper Belt. Its surface is covered with frozen methane, ethane, and possibly nitrogen, giving it a bright appearance.</p>
+                    <ul class="planet-stats">
+                        <li><strong>Moons:</strong> 14 </li>
+                        <li><strong>Distance from Sun:</strong> 6.8 billion km</li>
+                        <li><strong>Day:</strong> 22.5 hours</li>
+                        <li><strong>Year:</strong> 305 Earth years</li>
+                    </ul>
+                    <a href="#" class="planet-link">Read More</a>
+                </div>
+            </div>
+            <!-- Eris -->
+            <div class="planet-card">
+                <div class="planet-image">
+                    <img src="web images/Frame 239206.png" alt="Makemake">
+                </div>
+                <div class="planet-info">
+                    <h3>Eris</h3>
+                    <p>Eris is a dwarf planet in the Kuiper Belt. Its surface is covered with frozen methane, ethane, and possibly nitrogen, giving it a bright appearance.</p>
+                    <ul class="planet-stats">
+                        <li><strong>Moons:</strong> 43 </li>
+                        <li><strong>Distance from Sun:</strong> 6.8 billion km</li>
+                        <li><strong>Day:</strong> 22.5 hours</li>
+                        <li><strong>Year:</strong> 305 Earth years</li>
+                    </ul>
+                    <a href="#" class="planet-link">Read More</a>
+                </div>
+            </div>
+
+            <!-- Earth Special Card -->
+            <div class="planet-card earth-card">
+                <div class="planet-image-large">
+                    <img src="web images/terre.webp" alt="Earth">
+                </div>
+                <div class="planet-info-large">
+                    <h3>La Terre</h3>
+                    <p>La planète bleue est notre foyer. C'est la seule planète connue à abriter la vie. Elle possède une atmosphère riche en oxygène, de vastes océans et des continents diversifiés qui créent un environnement unique dans notre système solaire.</p>
+                    <ul class="planet-stats">
+                        <li><strong>Moons:</strong> 1</li>
+                        <li><strong>Distance du Soleil:</strong> 149.6 million km</li>
+                        <li><strong>Jour:</strong> 24 heures</li>
+                        <li><strong>Année:</strong> 365.25 jours</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-top">
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Important</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">Career</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Subscribe</h4>
+                <div class="subscribe">
+                    <input type="email" placeholder="Email address">
+                    <button><i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-logo">
+                <span>All Rights Reserved 2024</span>
+            </div>
+            <div class="footer-links">
+                <a href="#">Terms</a>
+                <a href="#">Privacy</a>
+                <a href="#">Cookies</a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

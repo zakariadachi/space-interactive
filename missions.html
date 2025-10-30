@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missions - Space Odyssey</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-top" style="background: url('images/header-background.jpg') center/contain;">
+            <div class="logo">
+                <div class="logo-icon">
+                    <img src="web images/logo.png" alt="Space Odyssey Logo" style="width: 222px; height: 40px;">
+                </div>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Search...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="header-actions">
+                <select name="language" id="lng">
+                    <option value="french">Français</option>
+                    <option value="english">English</option>
+                    <option value="arab">العربية</option>
+                </select>
+                <button class="icon-btn"><i class="fas fa-bell"></i></button>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="planets.html">PLANETS</a></li>
+                <li><a href="missions.html"  class="active">MISSIONS</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+            </ul>
+            <button class="contact-btn" onclick="window.location.href='contact.html'">Contact Us</button>
+        </nav>
+    </header>
+
+    <!-- Missions Hero Section -->
+    <section class="missions-hero" style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), 
+                url('web images/missionsback.png') center/cover;">
+        <div class="hero-content">
+            <h1>Missions</h1>
+            <p>A brief overview of major space missions highlighting their goals and scientific discoveries that expand our understanding of the cosmos and beyond.</p>
+            <button class="hero-btn">Read More</button>
+        </div>
+    </section>
+
+    <!-- Missions Grid -->
+    <section class="missions-grid-section">
+        <div class="missions-container">
+            <!-- Apollo 11 -->
+            <div class="mission-card">
+                <div class="mission-image">
+                    <img src="web images/apllo.webp" alt="Apollo 11">
+                </div>
+                <div class="mission-info">
+                    <h3>APOLLO 11</h3>
+                    <p class="mission-agency">Agency: NASA</p>
+                    <p class="mission-date">Launch Date: July 16, 1969</p>
+                    <p class="mission-desc">The historic mission that landed the first humans on the Moon. Neil Armstrong and Buzz Aldrin walked on the lunar surface while Michael Collins orbited above.</p>
+                    <a href="#" class="mission-link">Read More</a>
+                </div>
+            </div>
+
+            <!-- Voyager 1 -->
+            <div class="mission-card">
+                <div class="mission-image">
+                    <img src="web images/voyage.webp" alt="Voyager 1">
+                </div>
+                <div class="mission-info">
+                    <h3>VOYAGER 1</h3>
+                    <p class="mission-agency">Agency: NASA</p>
+                    <p class="mission-date">Launch Date: September 5, 1977</p>
+                    <p class="mission-desc">An interstellar probe that has traveled farther from Earth than any other spacecraft. It carries a golden record with sounds and images from Earth.</p>
+                    <a href="#" class="mission-link">Read More</a>
+                </div>
+            </div>
+
+            <!-- Artemis 1 -->
+            <div class="mission-card">
+                <div class="mission-image">
+                    <img src="web images/artemis.jpeg" alt="Artemis 1">
+                </div>
+                <div class="mission-info">
+                    <h3>ARTEMIS 1</h3>
+                    <p class="mission-agency">Agency: NASA</p>
+                    <p class="mission-date">Launch Date: November 16, 2022</p>
+                    <p class="mission-desc">The first integrated test of NASA's deep space exploration systems: the Orion spacecraft, Space Launch System rocket, and ground systems.</p>
+                    <a href="#" class="mission-link">Read More</a>
+                </div>
+            </div>
+
+            <!-- Hubble -->
+            <div class="mission-card">
+                <div class="mission-image">
+                    <img src="web images/hubble.webp" alt="Hubble Space Telescope">
+                </div>
+                <div class="mission-info">
+                    <h3>HUBBLE SPACE TELESCOPE</h3>
+                    <p class="mission-agency">Agency: NASA/ESA</p>
+                    <p class="mission-date">Launch Date: April 24, 1990</p>
+                    <p class="mission-desc">One of the most successful scientific instruments ever built. It has provided breathtaking images and revolutionary discoveries about the universe.</p>
+                    <a href="#" class="mission-link">Read More</a>
+                </div>
+            </div>
+
+            <!-- Opportunity Rover -->
+            <div class="mission-card">
+                <div class="mission-image">
+                    <img src="web images/curiosity.jpg" alt="Opportunity Rover">
+                </div>
+                <div class="mission-info">
+                    <h3>OPPORTUNITY ROVER</h3>
+                    <p class="mission-agency">Agency: NASA</p>
+                    <p class="mission-date">Launch Date: July 7, 2003</p>
+                    <p class="mission-desc">A Mars rover that operated for 15 years, far exceeding its planned 90-day mission. It discovered evidence that water once flowed on Mars.</p>
+                    <a href="#" class="mission-link">Read More</a>
+                </div>
+            </div>
+
+            <!-- Curiosity Rover -->
+            <div class="mission-card">
+                <div class="mission-image">
+                    <img src="web images/curiosity.jpg" alt="Curiosity Rover">
+                </div>
+                <div class="mission-info">
+                    <h3>CURIOSITY ROVER</h3>
+                    <p class="mission-agency">Agency: NASA</p>
+                    <p class="mission-date">Launch Date: November 26, 2011</p>
+                    <p class="mission-desc">A car-sized rover exploring Gale Crater on Mars. It has determined that Mars once had conditions favorable for microbial life.</p>
+                    <a href="#" class="mission-link">Read More</a>
+                </div>
+            </div>
+
+            <!-- Rosetta -->
+            <div class="mission-card">
+                <div class="mission-image">
+                    <img src="web images/rosetta.jpg" alt="Rosetta">
+                </div>
+                <div class="mission-info">
+                    <h3>ROSETTA</h3>
+                    <p class="mission-agency">Agency: ESA</p>
+                    <p class="mission-date">Launch Date: March 2, 2004</p>
+                    <p class="mission-desc">The first spacecraft to orbit a comet and deploy a lander on its surface. It studied comet 67P/Churyumov-Gerasimenko for over two years.</p>
+                    <a href="#" class="mission-link">Read More</a>
+                </div>
+            </div>
+
+            <!-- Cassini-Huygens -->
+            <div class="mission-card">
+                <div class="mission-image">
+                    <img src="web images/cassini.webp" alt="Cassini">
+                </div>
+                <div class="mission-info">
+                    <h3>CASSINI-HUYGENS</h3>
+                    <p class="mission-agency">Agency: NASA/ESA/ASI</p>
+                    <p class="mission-date">Launch Date: October 15, 1997</p>
+                    <p class="mission-desc">A mission to Saturn that revolutionized our understanding of the ringed planet and its moons, particularly Titan and Enceladus.</p>
+                    <a href="#" class="mission-link">Read More</a>
+                </div>
+            </div>
+
+            <!-- James Webb -->
+            <div class="mission-card">
+                <div class="mission-image">
+                    <img src="web images/james webb.webp" alt="James Webb">
+                </div>
+                <div class="mission-info">
+                    <h3>JAMES WEBB SPACE TELESCOPE</h3>
+                    <p class="mission-agency">Agency: NASA/ESA/CSA</p>
+                    <p class="mission-date">Launch Date: December 25, 2021</p>
+                    <p class="mission-desc">The most powerful space telescope ever built. It observes the universe in infrared light to see the first galaxies and study exoplanets.</p>
+                    <a href="#" class="mission-link">Read More</a>
+                </div>
+            </div>
+
+            <!-- New Horizons -->
+            <div class="mission-card">
+                <div class="mission-image">
+                    <img src="web images/UjvYGL6m8P7A8cniXJKHPL.jpg" alt="New Horizons">
+                </div>
+                <div class="mission-info">
+                    <h3>NEW HORIZONS</h3>
+                    <p class="mission-agency">Agency: NASA</p>
+                    <p class="mission-date">Launch Date: January 19, 2006</p>
+                    <p class="mission-desc">First mission to Pluto and the Kuiper Belt. It provided the first close-up images of Pluto and continues to explore the outer solar system.</p>
+                    <a href="#" class="mission-link">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missions - Charles Hopikins</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-top">
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Important</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">Career</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Subscribe</h4>
+                <div class="subscribe">
+                    <input type="email" placeholder="Email address">
+                    <button><i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-logo">
+                <span>All Rights Reserved 2024</span>
+            </div>
+            <div class="footer-links">
+                <a href="#">Terms</a>
+                <a href="#">Privacy</a>
+                <a href="#">Cookies</a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

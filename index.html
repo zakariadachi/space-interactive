@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missions - Space Odyssey</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-top" style="background: url('images/header-background.jpg') center/contain;">
+            <div class="logo">
+                <div class="logo-icon">
+                    <img src="web images/logo.png" alt="Space Odyssey Logo" style="width: 222px; height: 40px;">
+                </div>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Search...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="header-actions">
+                <select name="language" id="lng">
+                    <option value="french">Français</option>
+                    <option value="english">English</option>
+                    <option value="arab">العربية</option>
+                </select>
+                <button class="icon-btn"><i class="fas fa-bell"></i></button>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html"  class="active">HOME</a></li>
+                <li><a href="planets.html">PLANETS</a></li>
+                <li><a href="missions.html">MISSIONS</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+            </ul>
+            <button class="contact-btn" onclick="window.location.href='contact.html'">Contact Us</button>
+        </nav>
+    </header>
+
+    <!-- SECTION 1 - HERO -->
+    <div class="section1" style="background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('web images/indexback.png') center/cover; background-attachment: fixed;">
+        <div class="text">
+            <h1>Space Odyssey</h1>
+            <p>Explore the wonders of the universe. Discover stars, planets, and galaxies like never before!</p>
+        </div>
+        <a href="https://unsplash.com/fr/s/photos/space" target="_blank">
+            Explore Space 
+            <img src="web images/Vector.png" alt="Arrow" style="width: 18px; margin-left: 8px;">
+        </a>
+    </div>
+
+    <!-- SECTION 2 - CARDS -->
+    <div class="section2" style="background: linear-gradient(rgb(239, 236, 236));">
+        <div class="home-cards">
+
+            <!-- Card 1 -->
+            <div class="card card1" style="background: linear-gradient(rgb(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('web images/Disc.png') center/cover;">
+                <h1>Discover The Universe</h1>
+                <p>Get a glimpse into the wonders of the cosmos with our curated content on astronomical discoveries, celestial events, and fascinating space facts. Start your journey into the mysteries of the universe right here.</p>
+                <a href="#">Learn More</a>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card card2" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('web images/Disc.png') center/cover;">
+                <h1>Updated on Space News</h1>
+                <p>Keep up with the latest news in the world of space and astronomy. From recent discoveries to upcoming celestial events, stay informed with the most current updates and highlights.</p>
+                <a href="#">Learn More</a>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card card3" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('web images/Disc.png') center/cover;">
+                <h1>Learn from Experts</h1>
+                <p>Gain insights from astronomy experts with our informative articles and guides. Whether you're a beginner or an enthusiast, expand your knowledge with easy-to-understand resources tailored for all levels.</p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+
+        <!-- Time in Space Section -->
+        <div class="time-in-space">
+            <div class="text">
+                <p>Dive into the fascinating world of astronomy with our curated content, expert insights, and the latest space news. Whether you're a curious learner or a seasoned enthusiast, explore our resources to deepen your understanding of the cosmos and stay connected with the ever-expanding universe.</p>
+            </div>
+            <div class="timer-card">
+                <div class="total-time">
+                    <div class="timer-icon">
+                        <div class="icon">
+                            <img src="web images/Frame 142.png" alt="Timer Icon" style="width: 24px;">
+                        </div>
+                        <span>Total time in space</span>
+                    </div>
+                </div>
+                <div class="exact-time">
+                    <span>352D 5H 49M 20S</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 3 - WHAT IS ASTRONOMY -->
+    <div class="section3">
+        <div class="section3-container">
+            <div class="section3-left-side" style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('web images/whatisastronomy.png') center/cover;"></div>
+            <div class="section3-right-side">
+                <h1>What is Astronomy?</h1>
+                <p>Astronomy is the scientific study of celestial objects like stars, planets, galaxies, and phenomena that occur outside Earth's atmosphere. It explores the universe's origins, structure, and evolution, using observation, theoretical models, and advanced technologies to understand cosmic events and the physical laws governing the cosmos.</p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+    </div>
+ <!-- SECTION 4 - IMAGE OF THE DAY -->
+    <div class="section4">
+        <div class="section4-container">
+            <div class="section4-left-side">
+                <h1>Image Of The Day</h1>
+                <h3>Earth's Crest Over the Lunar Horizon</h3>
+                <p>This view of the Earth's crest over the lunar horizon was taken on July 29, 1971, during the <a href="#">Apollo 11</a> lunar landing mission. Astronauts David Scott, Alfred Worden, and James Irwin <a href="#">launched</a> from NASA's Kennedy Space Center in Florida aboard a Saturn V launch vehicle.</p>
+                <p>Designed to explore the Moon over longer periods, greater ranges, and with more instruments for the collection of scientific data than before, Apollo 15 included the introduction of a $40 million lunar roving vehicle (LRV) that reached a top speed of 10 mph (16 kph) across the Moon's surface.</p>
+                <p><strong>Image Credit: NASA</strong></p>
+                <div class="button">
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+            <div class="section4-right-side">
+                <div class="img" style="background: url('web images/imageoftheday.png') center/cover;"></div>
+                <div class="button2">
+                    <a href="#">View Image</a>
+                    <img src="web images/Vector.png" alt="Arrow">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 5 - OUR VISION & MISSION -->
+    <div class="section5">
+        <div class="vision-mission-container" style="background: url('web images/ourmission.png') center/cover;">
+            <div class="vision-box">
+                <h2>Our Vision</h2>
+                <p>To ignite curiosity and foster a deeper understanding of the universe, inspiring people to explore the mysteries of space and our place within it.</p>
+            </div>
+            <div class="mission-box">
+                <h2>Our Mission</h2>
+                <p>To deliver captivating, easy-to-understand astronomy content that educates, inspires, and encourages everyone to explore the wonders of the cosmos.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 6 - OUR COMMUNITY -->
+    <div class="section6">
+        <div class="community-header">
+            <div class="community-icon">
+                <i class="fas fa-users"></i>
+            </div>
+            <h2>Our Community</h2>
+        </div>
+        <div class="community-members">
+            <div class="member">
+                <img src="web images/orion.png" alt="Orion Vega">
+                <h3>Orion Vega</h3>
+            </div>
+            <div class="member">
+                <img src="web images/cassius.png" alt="Cassius Hale">
+                <h3>Cassius Hale</h3>
+            </div>
+            <div class="member">
+                <img src="web images/Placeholder.png" alt="Lyra Andromeda">
+                <h3>Lyra Andromeda</h3>
+            </div>
+            <div class="member">
+                <img src="web images/leo.png" alt="Leo Armstrong">
+                <h3>Leo Armstrong</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 7 - GROW WITH US -->
+    <div class="section7">
+        <h2>Grow With Us</h2>
+        <div class="grow-cards">
+            <div class="grow-card">
+                <div class="grow-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3>Education</h3>
+                <p>Comprehensive resources and courses to expand your knowledge of astronomy and space science.</p>
+            </div>
+            <div class="grow-card">
+                <div class="grow-icon">
+                    <i class="fas fa-book-open"></i>
+                </div>
+                <h3>Resources</h3>
+                <p>Access to extensive libraries, research papers, and educational materials for all levels.</p>
+            </div>
+            <div class="grow-card">
+                <div class="grow-icon">
+                    <i class="fas fa-telescope"></i>
+                </div>
+                <h3>Discovery</h3>
+                <p>Join our community in exploring new frontiers and uncovering the mysteries of the universe.</p>
+            </div>
+            <div class="grow-card">
+                <div class="grow-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h3>Innovation</h3>
+                <p>Stay updated with cutting-edge space technology and groundbreaking astronomical discoveries.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 8 - ASTRONOMY COMMUNITIES STATS -->
+    <div class="section8">
+        <div class="stats-container">
+            <div class="stats-left">
+                <h2>Astronomy Communities<br>For Everyone</h2>
+                <p>Join thousands of space enthusiasts and professionals in our thriving community dedicated to exploring the universe together.</p>
+            </div>
+            <div class="stats-right">
+                <div class="stat-box">
+                    <h3>5K+</h3>
+                    <p>MEMBERS</p>
+                </div>
+                <div class="stat-box">
+                    <h3>12</h3>
+                    <p>YEARS OF EXPERTISE</p>
+                </div>
+                <div class="stat-box">
+                    <h3>10K+</h3>
+                    <p>ARTICLES</p>
+                </div>
+                <div class="stat-box">
+                    <h3>200</h3>
+                    <p>COUNTRIES</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-top">
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Important</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">Career</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Subscribe</h4>
+                <div class="subscribe">
+                    <input type="email" placeholder="Email address">
+                    <button><i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-logo">
+                <span>All Rights Reserved 2024</span>
+            </div>
+            <div class="footer-links">
+                <a href="#">Terms</a>
+                <a href="#">Privacy</a>
+                <a href="#">Cookies</a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
