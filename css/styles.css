@@ -76,7 +76,7 @@ body {
 }
 
 .header-actions select {
-    background: transparent;
+    background: black;
     border: 1px solid #444;
     color: #fff;
     padding: 8px 15px;
@@ -2133,6 +2133,7 @@ body {
     transform: translateY(10px);
     transition: all 0.3s;
 }
+
 
 .mission-card:hover .mission-actions {
     opacity: 1;
