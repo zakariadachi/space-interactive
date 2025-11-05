@@ -2129,7 +2129,7 @@ body {
     right: 15px;
     display: flex;
     gap: 8px;
-    opacity: 0;
+    opacity: 1;
     transform: translateY(10px);
     transition: all 0.3s;
 }
