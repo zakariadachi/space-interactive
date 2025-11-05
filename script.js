@@ -184,21 +184,21 @@ function sortMissions(missionsList, sortType) {
     }
 }
 
-function resetFilters() {
-    document.getElementById('searchInput').value = '';
-    document.getElementById('agencyFilter').value = 'all';
-    document.getElementById('yearFilter').value = 'all';
-    document.getElementById('sortFilter').value = 'newest';
+// function resetFilters() {
+//     document.getElementById('searchInput').value = '';
+//     document.getElementById('agencyFilter').value = 'all';
+//     document.getElementById('yearFilter').value = 'all';
+//     document.getElementById('sortFilter').value = 'newest';
 
-    currentFilter = {
-        search: '',
-        agency: 'all',
-        year: 'all',
-        sort: 'newest'
-    };
+//     currentFilter = {
+//         search: '',
+//         agency: 'all',
+//         year: 'all',
+//         sort: 'newest'
+//     };
 
-    displayMissions(missions);
-}
+// displayMissions(missions);
+// }
 
 // ==================== EDIT FUNCTIONALITY ====================
 function editMission(missionId) {
