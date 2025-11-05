@@ -455,3 +455,98 @@ function saveNewMission() {
     showNotification("Mission ajoutée avec succès !", "success");
 }
 
+// contact-validation.js
+
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('contactForm');
+
+    function setError(field, message) {
+        const formField = field.parentElement;
+        const error = formField.querySelector('.error-message');
+        error.textContent = message;
+        formField.classList.add('invalid');
+    }
+
+    function clearError(field) {
+        const formField = field.parentElement;
+        const error = formField.querySelector('.error-message');
+        error.textContent = '';
+        formField.classList.remove('invalid');
+    }
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const firstName = document.getElementById('firstname');
+        const lastName = document.getElementById('lastname');
+        const email = document.getElementById('email');
+        const phone = document.getElementById('phone');
+        const message = document.getElementById('message');
+        const subject = document.querySelector('input[name="subject"]:checked');
+
+        const nameRegex = /^[a-zA-ZÀ-ÿ' -]{2,}$/;
+        const emailRegex = /^[\w-.]+@[\w-]+\.[a-z]{2,}$/i;
+        const phoneRegex = /^\+?\d{9,15}$/;
+
+        let valid = true;
+
+        if (!firstName.value.trim()) {
+            setError(firstName, 'Le prénom est requis.');
+            valid = false;
+        } else if (!nameRegex.test(firstName.value.trim())) {
+            setError(firstName, 'Prénom invalide (2 caractères min, lettres uniquement).');
+            valid = false;
+        } else {
+            clearError(firstName);
+        }
+
+        if (!lastName.value.trim()) {
+            setError(lastName, 'Le nom est requis.');
+            valid = false;
+        } else if (!nameRegex.test(lastName.value.trim())) {
+            setError(lastName, 'Nom invalide (2 caractères min, lettres uniquement).');
+            valid = false;
+        } else {
+            clearError(lastName);
+        }
+
+        if (!email.value.trim()) {
+            setError(email, 'L\'email est requis.');
+            valid = false;
+        } else if (!emailRegex.test(email.value.trim())) {
+            setError(email, 'Email invalide.');
+            valid = false;
+        } else {
+            clearError(email);
+        }
+
+        if (!phone.value.trim()) {
+            setError(phone, 'Le numéro de téléphone est requis.');
+            valid = false;
+        } else if (!phoneRegex.test(phone.value.trim())) {
+            setError(phone, 'Numéro de téléphone invalide (9 à 15 chiffres).');
+            valid = false;
+        } else {
+            clearError(phone);
+        }
+
+        if (!subject) {
+            alert('Veuillez sélectionner un sujet.');
+            valid = false;
+        }
+
+        if (!message.value.trim()) {
+            setError(message, 'Le message est requis.');
+            valid = false;
+        } else {
+            clearError(message);
+        }
+
+        if (valid) {
+            alert('Votre message a bien été envoyé ! Merci.');
+            form.reset();
+        }
+    });
+
+});
+
