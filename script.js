@@ -423,5 +423,37 @@ function cancelAdd() {
     document.getElementById("addForm").reset();
 }
 
+// Fonction pour enregistrer nouvelle mission
+function saveNewMission() {
+    const name = document.getElementById("addName").value.trim();
+    const agency = document.getElementById("addAgency").value;
+    const launchDate = document.getElementById("addLaunchDate").value;
+    const objective = document.getElementById("addObjective").value.trim();
+    const details = document.getElementById("addDetails").value.trim();
+
+    if (!name || !agency || !launchDate || !objective) {
+        alert("Veuillez remplir tous les champs obligatoires.");
+        return;
+    }
+
+    const maxId = missions.reduce((max, m) => Math.max(max, m.id), 0);
+    const newMission = {
+        id: maxId + 1,
+        name: name,
+        agency: agency,
+        launchDate: new Date(launchDate).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" }),
+        year: new Date(launchDate).getFullYear(),
+        objective: objective,
+        details: details,
+        favorite: false,
+        image: "default_image_url_here"
+    };
+
+    missions.push(newMission);
+    cancelAdd();
+    applyFilters();
+    showNotification("Mission ajoutée avec succès !", "success");
+}
+
 
 
