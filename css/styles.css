@@ -1472,14 +1472,6 @@ body {
     font-size: 14px;
 }
 
-.planet-bg {
-    position: absolute;
-    bottom: 70px;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0.3;
-}
-
 .social-buttons {
     position: absolute;
     bottom: 25px;
@@ -1575,6 +1567,36 @@ body {
 .send-btn:hover {
     background: #00a8ff;
     transform: translateY(-2px);
+}
+
+/* message validattion */
+
+.success-message {
+    color: #27ae60;
+    /* Vert */
+    font-size: 14px;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 600;
+    display: none;
+}
+
+
+/* Styles erreur */
+.error-message {
+    display: none;
+    color: #e74c3c;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.form-field.invalid .error-message {
+    display: block;
+}
+
+.form-field.invalid input,
+.form-field.invalid textarea {
+    border-bottom-color: #e74c3c;
 }
 
 .contact-methods {

@@ -53,113 +53,105 @@
     </header>
 
 
-    <!-- Contact Section -->
-    <main class="contact-page">
+    <div class="contact-page">
         <div class="contact-wrapper">
             <div class="contact-box">
-                <!-- Left Side -->
+
                 <div class="contact-left">
-                    <h2>Contact Us</h2>
-                    <p class="subtitle">Any question or remarks? Just write us a message!</p>
+                    <h2>Contactez-nous</h2>
+                    <p class="subtitle">Nous sommes là pour répondre à vos questions</p>
 
                     <div class="contact-info">
-                        <div class="info-item">
-                            <i class="fas fa-phone"></i>
-                            <span>+012 3456 789</span>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>demo@gmail.com</span>
-                        </div>
-                    </div>
-
-                    <div class="planet-bg">
-                        <svg width="180" height="180" viewBox="0 0 200 200">
-                            <circle cx="100" cy="100" r="70" fill="#d4764a" opacity="0.4" />
-                        </svg>
+                        <div class="info-item"><i class="fas fa-map-marker-alt"></i>123 Rue de l'Espace, Paris</div>
+                        <div class="info-item"><i class="fas fa-phone"></i>+33 1 23 45 67 89</div>
+                        <div class="info-item"><i class="fas fa-envelope"></i>contact@spaceodyssey.fr</div>
                     </div>
 
                     <div class="social-buttons">
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-discord"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
 
-                <!-- Right Side -->
                 <div class="contact-right">
-                    <form id="contactForm">
+                    <form id="contactForm" novalidate>
                         <div class="form-row-2">
                             <div class="form-field">
-                                <label>First Name</label>
-                                <input type="text" id="firstname" required>
+                                <label for="firstname">Prénom</label>
+                                <input type="text" id="firstname" name="firstname" required />
+                                <small class="error-message"></small>
                             </div>
                             <div class="form-field">
-                                <label>Last Name</label>
-                                <input type="text" id="lastname" required>
+                                <label for="lastname">Nom</label>
+                                <input type="text" id="lastname" name="lastname" required />
+                                <small class="error-message"></small>
                             </div>
                         </div>
 
                         <div class="form-row-2">
                             <div class="form-field">
-                                <label>Email</label>
-                                <input type="email" id="email" required>
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required />
+                                <small class="error-message"></small>
                             </div>
                             <div class="form-field">
-                                <label>Phone Number</label>
-                                <input type="tel" id="phone" required>
+                                <label for="phone">Téléphone</label>
+                                <input type="tel" id="phone" name="phone" required />
+                                <small class="error-message"></small>
                             </div>
                         </div>
 
                         <div class="form-field">
-                            <label>Select Subject?</label>
+                            <label>Sujet</label>
                             <div class="radio-options">
-                                <label><input type="radio" name="subject" value="general" checked> <span>General
-                                        Inquiry</span></label>
-                                <label><input type="radio" name="subject" value="planet"> <span>Planet
-                                        Inquiry</span></label>
-                                <label><input type="radio" name="subject" value="general2"> <span>General
-                                        Inquiry</span></label>
-                                <label><input type="radio" name="subject" value="other"> <span>Other
-                                        Inquiry</span></label>
+                                <label><input type="radio" name="subject" value="general" checked />Général</label>
+                                <label><input type="radio" name="subject" value="planet" />Planètes</label>
+                                <label><input type="radio" name="subject" value="other" />Autre</label>
                             </div>
                         </div>
 
                         <div class="form-field">
-                            <label>Message</label>
-                            <textarea id="message" rows="3" placeholder="Write your message..." required></textarea>
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Votre message..."
+                                required></textarea>
+                            <small class="error-message"></small>
                         </div>
+                        <div id="successMessage" class="success-message"></div>
 
-                        <button type="submit" class="send-btn">Send Message</button>
+
+                        <button type="submit" class="send-btn">Envoyer</button>
                     </form>
                 </div>
-            </div>
-        </div>
 
-        <!-- Contact Methods -->
-        <div class="contact-methods">
-            <div class="method-box">
-                <i class="fas fa-envelope"></i>
-                <h3>Email</h3>
-                <p>Our friendly team is here to help. Feel free to ask us about our work or share any inquiries, ideas
-                    and work with your questions.</p>
-                <a href="mailto:contact@charleshopikins.com">Click Here ></a>
-            </div>
-            <div class="method-box">
-                <i class="fas fa-comments"></i>
-                <h3>Live Chat</h3>
-                <p>Connect in real-time with our staff for immediate assistance. Send us your questions. We'd love to
-                    help you!</p>
-                <a href="#">Click Here ></a>
-            </div>
-            <div class="method-box">
-                <i class="fas fa-phone"></i>
-                <h3>Phone</h3>
-                <p>Talk to our team to communicate assistance via video call or by calling. We are inquiring & support
-                    you need.</p>
-                <p class="phone">+9102216488</p>
             </div>
         </div>
+    </div>
+
+    <!-- Contact Methods -->
+    <div class="contact-methods">
+        <div class="method-box">
+            <i class="fas fa-envelope"></i>
+            <h3>Email</h3>
+            <p>Our friendly team is here to help. Feel free to ask us about our work or share any inquiries, ideas
+                and work with your questions.</p>
+            <a href="mailto:contact@charleshopikins.com">Click Here ></a>
+        </div>
+        <div class="method-box">
+            <i class="fas fa-comments"></i>
+            <h3>Live Chat</h3>
+            <p>Connect in real-time with our staff for immediate assistance. Send us your questions. We'd love to
+                help you!</p>
+            <a href="#">Click Here ></a>
+        </div>
+        <div class="method-box">
+            <i class="fas fa-phone"></i>
+            <h3>Phone</h3>
+            <p>Talk to our team to communicate assistance via video call or by calling. We are inquiring & support
+                you need.</p>
+            <p class="phone">+9102216488</p>
+        </div>
+    </div>
     </main>
 
     <!-- Footer -->
@@ -214,7 +206,7 @@
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
