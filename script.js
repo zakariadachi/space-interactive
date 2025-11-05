@@ -456,7 +456,6 @@ function saveNewMission() {
 }
 
 // contact-validation.js
-
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('contactForm');
 
@@ -494,7 +493,7 @@ document.addEventListener('DOMContentLoaded', function () {
             setError(firstName, 'Le prénom est requis.');
             valid = false;
         } else if (!nameRegex.test(firstName.value.trim())) {
-            setError(firstName, 'Prénom invalide (2 caractères min, lettres uniquement).');
+            setError(firstName, 'Prénom invalide');
             valid = false;
         } else {
             clearError(firstName);
@@ -504,7 +503,7 @@ document.addEventListener('DOMContentLoaded', function () {
             setError(lastName, 'Le nom est requis.');
             valid = false;
         } else if (!nameRegex.test(lastName.value.trim())) {
-            setError(lastName, 'Nom invalide (2 caractères min, lettres uniquement).');
+            setError(lastName, 'Nom invalide.');
             valid = false;
         } else {
             clearError(lastName);
@@ -524,7 +523,7 @@ document.addEventListener('DOMContentLoaded', function () {
             setError(phone, 'Le numéro de téléphone est requis.');
             valid = false;
         } else if (!phoneRegex.test(phone.value.trim())) {
-            setError(phone, 'Numéro de téléphone invalide (9 à 15 chiffres).');
+            setError(phone, 'Numéro de téléphone invalide');
             valid = false;
         } else {
             clearError(phone);
@@ -547,6 +546,4 @@ document.addEventListener('DOMContentLoaded', function () {
             form.reset();
         }
     });
-
 });
-
