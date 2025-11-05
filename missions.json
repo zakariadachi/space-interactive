@@ -1,0 +1,102 @@
+[
+    {
+        "id": 1,
+        "name": "Apollo 11",
+        "agency": "NASA",
+        "launchDate": "July 16, 1969",
+        "year": 1969,
+        "objective": "The historic mission that landed the first humans on the Moon. Neil Armstrong and Buzz Aldrin walked on the lunar surface while Michael Collins orbited above.",
+        "details": "Apollo 11 was the culmination of the Space Race and fulfilled President Kennedy's goal of landing a man on the Moon before 1970. The mission lasted 8 days and returned with 47.5 pounds of lunar samples.",
+        "image": "web images/apllo.webp"
+    },
+    {
+        "id": 2,
+        "name": "Voyager 1",
+        "agency": "NASA",
+        "launchDate": "September 5, 1977",
+        "year": 1977,
+        "objective": "An interstellar probe that has traveled farther from Earth than any other spacecraft. It carries a golden record with sounds and images from Earth.",
+        "details": "Voyager 1 has entered interstellar space and continues to send data back to Earth. The Golden Record contains 115 images, natural sounds, musical selections, and greetings in 55 languages.",
+        "image": "web images/voyage.webp"
+    },
+    {
+        "id": 3,
+        "name": "Artemis I",
+        "agency": "NASA",
+        "launchDate": "November 16, 2022",
+        "year": 2022,
+        "objective": "The first integrated test of NASA's deep space exploration systems: the Orion spacecraft, Space Launch System rocket, and ground systems.",
+        "details": "Artemis I was an uncrewed mission that paved the way for future crewed missions to the Moon. It tested the Orion spacecraft in a lunar environment and demonstrated its ability to return safely to Earth.",
+        "image": "web images/rosetta.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Hubble Space Telescope",
+        "agency": "NASA/ESA",
+        "launchDate": "April 24, 1990",
+        "year": 1990,
+        "objective": "One of the most successful scientific instruments ever built. It has provided breathtaking images and revolutionary discoveries about the universe.",
+        "details": "Hubble orbits Earth at an altitude of about 547 kilometers and has made over 1.5 million observations. It has helped determine the age of the universe and discovered dark energy.",
+        "image": "web images/curiosity.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Spirit Rover",
+        "agency": "NASA",
+        "launchDate": "July 7, 2003",
+        "year": 2003,
+        "objective": "A Mars rover that operated for 15 years, far exceeding its planned 90-day mission. It discovered evidence that water once flowed on Mars.",
+        "details": "Spirit explored the Gusev Crater and climbed the Columbia Hills. It discovered evidence of ancient hot springs and volcanic activity, providing crucial insights into Mars' wet past.",
+        "image": "web images/spirit-rover.webp"
+    },
+    {
+        "id": 6,
+        "name": "Curiosity Rover",
+        "agency": "NASA",
+        "launchDate": "November 26, 2011",
+        "year": 2011,
+        "objective": "A car-sized rover exploring Gale Crater on Mars. It has determined that Mars once had conditions favorable for microbial life.",
+        "details": "Curiosity is equipped with 17 cameras and a suite of scientific instruments. It has found organic molecules and seasonal variations in methane, suggesting potential biological activity.",
+        "image": "web images/artemis.jpeg"
+    },
+    {
+        "id": 7,
+        "name": "Rosetta",
+        "agency": "ESA",
+        "launchDate": "March 2, 2004",
+        "year": 2004,
+        "objective": "The first spacecraft to orbit a comet and deploy a lander on its surface. It studied comet 67P/Churyumov-Gerasimenko for over two years.",
+        "details": "Rosetta's Philae lander was the first to make a controlled touchdown on a comet nucleus. The mission provided unprecedented data about comets' composition and behavior.",
+        "image": "web images/hubble.webp"
+    },
+    {
+        "id": 8,
+        "name": "Cassini-Huygens",
+        "agency": "NASA/ESA/ASI",
+        "launchDate": "October 15, 1997",
+        "year": 1997,
+        "objective": "A mission to Saturn that revolutionized our understanding of the ringed planet and its moons, particularly Titan and Enceladus.",
+        "details": "Cassini orbited Saturn for 13 years, discovering water-ice geysers on Enceladus and liquid methane seas on Titan. The Huygens probe successfully landed on Titan in 2005.",
+        "image": "web images/bapiColombo.webp"
+    },
+    {
+        "id": 9,
+        "name": "James Webb Space Telescope",
+        "agency": "NASA/ESA/CSA",
+        "launchDate": "December 25, 2021",
+        "year": 2021,
+        "objective": "The most powerful space telescope ever built. It observes the universe in infrared light to see the first galaxies and study exoplanets.",
+        "details": "JWST is located at the L2 Lagrange point, 1.5 million km from Earth. Its 6.5-meter primary mirror and infrared capabilities allow it to see through dust clouds and observe the earliest galaxies.",
+        "image": "web images/jamesWeb.webp"
+    },
+    {
+        "id": 10,
+        "name": "New Horizons",
+        "agency": "NASA",
+        "launchDate": "January 19, 2006",
+        "year": 2006,
+        "objective": "First mission to Pluto and the Kuiper Belt. It provided the first close-up images of Pluto and continues to explore the outer solar system.",
+        "details": "New Horizons completed its historic flyby of Pluto in 2015, revealing a geologically active world with mountains and plains. It then visited Kuiper Belt object Arrokoth in 2019.",
+        "image": "web images/new-horizon.webp"
+    }
+]

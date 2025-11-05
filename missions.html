@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script src="script.js"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Orbitron:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
@@ -18,271 +17,316 @@
 <body>
     <!-- Header -->
     <header class="main-header">
-        <div class="header-top" style="background: url('images/header-background.jpg') center/contain;">
+        <div class="header-top">
             <div class="logo">
-                <div class="logo-icon">
-                    <img src="web images/logo.png" alt="Space Odyssey Logo" style="width: 222px; height: 40px;">
-                </div>
+                <img src="logo.png" alt="Space Explorer" class="logo-icon">
             </div>
             <div class="search-box">
-                <input type="text" placeholder="Search...">
-                <button><i class="fas fa-search"></i></button>
+                <input type="text" id="searchInput" placeholder="Search missions...">
+                <button onclick="applyFilters()"><i class="fas fa-search"></i></button>
             </div>
             <div class="header-actions">
-                <select name="language" id="lng">
-                    <option value="french">Français</option>
-                    <option value="english">English</option>
-                    <option value="arab">العربية</option>
+                <select id="languageSelect">
+                    <option value="en">English</option>
+                    <option value="fr">Français</option>
                 </select>
-                <button class="icon-btn"><i class="fas fa-bell"></i></button>
+                <button class="icon-btn" id="favoritesBtn" title="View Favorites">
+                    <i class="fas fa-heart"></i>
+                </button>
+                <button class="icon-btn" id="themeToggle" title="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
             </div>
         </div>
         <nav class="main-nav">
             <div class="social-links">
-                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
             </div>
             <ul class="nav-menu">
                 <li><a href="index.html">HOME</a></li>
-                <li><a href="planets.html">PLANETS</a></li>
                 <li><a href="missions.html" class="active">MISSIONS</a></li>
+                <li><a href="planets.html">PLANETS</a></li>
                 <li><a href="about.html">ABOUT</a></li>
             </ul>
             <button class="contact-btn" onclick="window.location.href='contact.html'">Contact Us</button>
         </nav>
     </header>
 
-    <!-- Missions Hero Section -->
-    <section class="missions-hero" style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), 
-                url('web images/missionsback.png') center/cover;">
-        <div class="hero-content">
-            <h1>Missions</h1>
-            <p>A brief overview of major space missions highlighting their goals and scientific discoveries that expand
-                our understanding of the cosmos and beyond.</p>
-            <button class="hero-btn">Read More</button>
-        </div>
-    </section>
+    <body>
+        <!-- Edit Mission Modal -->
+        <div id="editModal" class="modal">
+            <div class="modal-content edit-modal-content">
+                <span class="modal-close">&times;</span>
+                <div class="edit-modal-header">
+                    <i class="fas fa-edit"></i>
+                    <h2>Edit Mission</h2>
+                </div>
+                <div class="edit-form-wrapper">
+                    <form class="edit-form" onsubmit="event.preventDefault(); saveEdit();">
+                        <input type="hidden" id="editMissionId">
 
-    <!-- Missions Grid -->
-    <section class="missions-grid-section">
-        <div class="missions-container">
-            <!-- Apollo 11 -->
-            <div class="mission-card">
-                <div class="mission-image">
-                    <img src="web images/apllo.webp" alt="Apollo 11">
-                </div>
-                <div class="mission-info">
-                    <h3>APOLLO 11</h3>
-                    <p class="mission-agency">Agency: NASA</p>
-                    <p class="mission-date">Launch Date: July 16, 1969</p>
-                    <p class="mission-desc">The historic mission that landed the first humans on the Moon. Neil
-                        Armstrong and Buzz Aldrin walked on the lunar surface while Michael Collins orbited above.</p>
-                    <a href="#" class="mission-link">Read More</a>
-                </div>
-            </div>
+                        <div class="form-group">
+                            <label for="editName">Mission Name *</label>
+                            <input type="text" id="editName" required placeholder="e.g., Apollo 11">
+                        </div>
 
-            <!-- Voyager 1 -->
-            <div class="mission-card">
-                <div class="mission-image">
-                    <img src="web images/voyage.webp" alt="Voyager 1">
-                </div>
-                <div class="mission-info">
-                    <h3>VOYAGER 1</h3>
-                    <p class="mission-agency">Agency: NASA</p>
-                    <p class="mission-date">Launch Date: September 5, 1977</p>
-                    <p class="mission-desc">An interstellar probe that has traveled farther from Earth than any other
-                        spacecraft. It carries a golden record with sounds and images from Earth.</p>
-                    <a href="#" class="mission-link">Read More</a>
-                </div>
-            </div>
+                        <div class="form-group">
+                            <label for="editAgency">Agency *</label>
+                            <select id="editAgency" required>
+                                <option value="">Select an agency</option>
+                                <option value="NASA">NASA</option>
+                                <option value="ESA">ESA</option>
+                                <option value="NASA/ESA">NASA/ESA</option>
+                                <option value="NASA/ESA/CSA">NASA/ESA/CSA</option>
+                                <option value="NASA/ESA/ASI">NASA/ESA/ASI</option>
+                            </select>
+                        </div>
 
-            <!-- Artemis 1 -->
-            <div class="mission-card">
-                <div class="mission-image">
-                    <img src="web images/artemis.jpeg" alt="Artemis 1">
-                </div>
-                <div class="mission-info">
-                    <h3>ARTEMIS 1</h3>
-                    <p class="mission-agency">Agency: NASA</p>
-                    <p class="mission-date">Launch Date: November 16, 2022</p>
-                    <p class="mission-desc">The first integrated test of NASA's deep space exploration systems: the
-                        Orion spacecraft, Space Launch System rocket, and ground systems.</p>
-                    <a href="#" class="mission-link">Read More</a>
-                </div>
-            </div>
+                        <div class="form-group">
+                            <label for="editLaunchDate">Launch Date *</label>
+                            <input type="date" id="editLaunchDate" required>
+                        </div>
 
-            <!-- Hubble -->
-            <div class="mission-card">
-                <div class="mission-image">
-                    <img src="web images/hubble.webp" alt="Hubble Space Telescope">
-                </div>
-                <div class="mission-info">
-                    <h3>HUBBLE SPACE TELESCOPE</h3>
-                    <p class="mission-agency">Agency: NASA/ESA</p>
-                    <p class="mission-date">Launch Date: April 24, 1990</p>
-                    <p class="mission-desc">One of the most successful scientific instruments ever built. It has
-                        provided breathtaking images and revolutionary discoveries about the universe.</p>
-                    <a href="#" class="mission-link">Read More</a>
-                </div>
-            </div>
+                        <div class="form-group">
+                            <label for="editObjective">Objective *</label>
+                            <textarea id="editObjective" rows="3" required
+                                placeholder="Brief description of the mission objective"></textarea>
+                        </div>
 
-            <!-- Opportunity Rover -->
-            <div class="mission-card">
-                <div class="mission-image">
-                    <img src="web images/curiosity.jpg" alt="Opportunity Rover">
-                </div>
-                <div class="mission-info">
-                    <h3>OPPORTUNITY ROVER</h3>
-                    <p class="mission-agency">Agency: NASA</p>
-                    <p class="mission-date">Launch Date: July 7, 2003</p>
-                    <p class="mission-desc">A Mars rover that operated for 15 years, far exceeding its planned 90-day
-                        mission. It discovered evidence that water once flowed on Mars.</p>
-                    <a href="#" class="mission-link">Read More</a>
-                </div>
-            </div>
+                        <div class="form-group">
+                            <label for="editDetails">Detailed Description</label>
+                            <textarea id="editDetails" rows="5"
+                                placeholder="Additional details about the mission"></textarea>
+                        </div>
 
-            <!-- Curiosity Rover -->
-            <div class="mission-card">
-                <div class="mission-image">
-                    <img src="web images/curiosity.jpg" alt="Curiosity Rover">
-                </div>
-                <div class="mission-info">
-                    <h3>CURIOSITY ROVER</h3>
-                    <p class="mission-agency">Agency: NASA</p>
-                    <p class="mission-date">Launch Date: November 26, 2011</p>
-                    <p class="mission-desc">A car-sized rover exploring Gale Crater on Mars. It has determined that Mars
-                        once had conditions favorable for microbial life.</p>
-                    <a href="#" class="mission-link">Read More</a>
-                </div>
-            </div>
-
-            <!-- Rosetta -->
-            <div class="mission-card">
-                <div class="mission-image">
-                    <img src="web images/rosetta.jpg" alt="Rosetta">
-                </div>
-                <div class="mission-info">
-                    <h3>ROSETTA</h3>
-                    <p class="mission-agency">Agency: ESA</p>
-                    <p class="mission-date">Launch Date: March 2, 2004</p>
-                    <p class="mission-desc">The first spacecraft to orbit a comet and deploy a lander on its surface. It
-                        studied comet 67P/Churyumov-Gerasimenko for over two years.</p>
-                    <a href="#" class="mission-link">Read More</a>
-                </div>
-            </div>
-
-            <!-- Cassini-Huygens -->
-            <div class="mission-card">
-                <div class="mission-image">
-                    <img src="web images/cassini.webp" alt="Cassini">
-                </div>
-                <div class="mission-info">
-                    <h3>CASSINI-HUYGENS</h3>
-                    <p class="mission-agency">Agency: NASA/ESA/ASI</p>
-                    <p class="mission-date">Launch Date: October 15, 1997</p>
-                    <p class="mission-desc">A mission to Saturn that revolutionized our understanding of the ringed
-                        planet and its moons, particularly Titan and Enceladus.</p>
-                    <a href="#" class="mission-link">Read More</a>
-                </div>
-            </div>
-
-            <!-- James Webb -->
-            <div class="mission-card">
-                <div class="mission-image">
-                    <img src="web images/james webb.webp" alt="James Webb">
-                </div>
-                <div class="mission-info">
-                    <h3>JAMES WEBB SPACE TELESCOPE</h3>
-                    <p class="mission-agency">Agency: NASA/ESA/CSA</p>
-                    <p class="mission-date">Launch Date: December 25, 2021</p>
-                    <p class="mission-desc">The most powerful space telescope ever built. It observes the universe in
-                        infrared light to see the first galaxies and study exoplanets.</p>
-                    <a href="#" class="mission-link">Read More</a>
-                </div>
-            </div>
-
-            <!-- New Horizons -->
-            <div class="mission-card">
-                <div class="mission-image">
-                    <img src="web images/UjvYGL6m8P7A8cniXJKHPL.jpg" alt="New Horizons">
-                </div>
-                <div class="mission-info">
-                    <h3>NEW HORIZONS</h3>
-                    <p class="mission-agency">Agency: NASA</p>
-                    <p class="mission-date">Launch Date: January 19, 2006</p>
-                    <p class="mission-desc">First mission to Pluto and the Kuiper Belt. It provided the first close-up
-                        images of Pluto and continues to explore the outer solar system.</p>
-                    <a href="#" class="mission-link">Read More</a>
+                        <div class="form-actions">
+                            <button type="button" class="btn-cancel" onclick="cancelEdit()">
+                                <i class="fas fa-times"></i> Cancel
+                            </button>
+                            <button type="submit" class="btn-save">
+                                <i class="fas fa-save"></i> Save Changes
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!DOCTYPE html>
-    <html lang="fr">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Missions - Charles Hopikins</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-        <link rel="stylesheet" href="css/styles.css">
-    </head>
-
-    <!-- Footer -->
-    <footer class="main-footer">
-        <div class="footer-top">
-            <div class="footer-col">
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Important</h4>
-                <ul>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Support</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="#">Career</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Subscribe</h4>
-                <div class="subscribe">
-                    <input type="email" placeholder="Email address">
-                    <button><i class="fas fa-arrow-right"></i></button>
+        <!-- Add Mission Modal -->
+        <div id="addModal" class="modal">
+            <div class="modal-content add-modal-content">
+                <span class="modal-close" id="addCloseBtn">&times;</span>
+                <div class="add-modal-header">
+                    <h2>Ajouter une Mission</h2>
+                </div>
+                <div class="add-form-wrapper">
+                    <form id="addForm" onsubmit="event.preventDefault(); saveNewMission();">
+                        <div class="form-group">
+                            <label for="addName">Nom de la mission *</label>
+                            <input type="text" id="addName" required placeholder="Ex: Apollo 11">
+                        </div>
+                        <div class="form-group">
+                            <label for="addAgency">Agence *</label>
+                            <select id="addAgency" required>
+                                <option value="">Sélectionnez une agence</option>
+                                <option value="NASA">NASA</option>
+                                <option value="ESA">ESA</option>
+                                <option value="NASA/ESA">NASA/ESA</option>
+                                <option value="NASA/ESA/CSA">NASA/ESA/CSA</option>
+                                <option value="NASA/ESA/ASI">NASA/ESA/ASI</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="addLaunchDate">Date de lancement *</label>
+                            <input type="date" id="addLaunchDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="addObjective">Objectif *</label>
+                            <textarea id="addObjective" rows="3" required
+                                placeholder="Description brève de la mission"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="addDetails">Détails</label>
+                            <textarea id="addDetails" rows="5" placeholder="Informations supplémentaires"></textarea>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn-cancel" onclick="cancelAdd()">Annuler</button>
+                            <button type="submit" class="btn-save">Ajouter</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <div class="footer-logo">
-                <span>All Rights Reserved 2024</span>
-            </div>
-            <div class="footer-links">
-                <a href="#">Terms</a>
-                <a href="#">Privacy</a>
-                <a href="#">Cookies</a>
-            </div>
-            <div class="footer-social">
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
+
+
+
+        <!-- Delete Confirmation Modal -->
+        <div id="deleteModal" class="modal">
+            <div class="modal-content delete-modal-content">
+                <div class="delete-modal-header">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <h2>Confirm Delete</h2>
+                </div>
+                <div class="delete-modal-body">
+                    <p>Are you sure you want to delete the mission:</p>
+                    <p class="delete-mission-name" id="deleteMissionName"></p>
+                    <p class="delete-warning">This action cannot be undone.</p>
+                </div>
+                <div class="delete-modal-actions">
+                    <button class="btn-cancel-delete" onclick="cancelDelete()">
+                        <i class="fas fa-times"></i> Cancel
+                    </button>
+                    <button id="confirmDeleteBtn" class="btn-confirm-delete">
+                        <i class="fas fa-trash"></i> Delete
+                    </button>
+                </div>
             </div>
         </div>
-    </footer>
 
-    <script src="js/script.js"></script>
-</body>
+
+
+        <!-- Hero Section -->
+        <section class="missions-hero"
+            style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=1920') center/cover;">
+            <div class="hero-content">
+                <h1>Space Missions</h1>
+                <p>A brief overview of major space missions highlighting their goals and scientific discoveries that
+                    expand
+                    our understanding of the cosmos and beyond.</p>
+            </div>
+        </section>
+
+        <!-- Filters Section -->
+        <section class="missions-filters">
+            <div class="filters-container">
+                <div class="filter-group">
+                    <label for="agencyFilter">Agency:</label>
+                    <select id="agencyFilter" onchange="applyFilters()">
+                        <option value="all">All Agencies</option>
+                        <option value="NASA">NASA</option>
+                        <option value="ESA">ESA</option>
+                        <option value="NASA/ESA">NASA/ESA</option>
+                        <option value="NASA/ESA/CSA">NASA/ESA/CSA</option>
+                        <option value="NASA/ESA/ASI">NASA/ESA/ASI</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="yearFilter">Year:</label>
+                    <select id="yearFilter" onchange="applyFilters()">
+                        <option value="all">All Years</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="sortFilter">Sort By:</label>
+                    <select id="sortFilter" onchange="applyFilters()">
+                        <option value="newest">Newest First</option>
+                        <option value="oldest">Oldest First</option>
+                        <option value="name">Name (A-Z)</option>
+                    </select>
+                </div>
+                <button id="addMissionBtn" class="btn-add-mission">Ajouter une mission</button>
+
+                <button class="filter-reset" onclick="resetFilters()">
+                    <i class="fas fa-redo"></i> Reset Filters
+                </button>
+
+            </div>
+        </section>
+
+        <!-- Missions Grid -->
+        <section class="missions-grid-section">
+            <div class="missions-container" id="missionsContainer">
+                <!-- Mission cards will be dynamically inserted here -->
+            </div>
+            <div id="noResults" class="no-results" style="display: none;">
+                <i class="fas fa-space-shuttle"></i>
+                <p>No missions found matching your criteria.</p>
+            </div>
+        </section>
+
+        <!-- Mission Details Modal -->
+        <div id="missionModal" class="modal">
+            <div class="modal-content">
+                <span class="modal-close">&times;</span>
+                <div class="modal-body">
+                    <div class="modal-image" id="modalImage"></div>
+                    <div class="modal-info">
+                        <h2 id="modalTitle"></h2>
+                        <div class="modal-meta">
+                            <span id="modalAgency"></span>
+                            <span id="modalDate"></span>
+                        </div>
+                        <p id="modalDescription"></p>
+                        <div class="modal-details" id="modalDetails"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Favorites Modal -->
+        <div id="favoritesModal" class="modal-favorites modal">
+            <div class="modal-content">
+                <span class="modal-close">&times;</span>
+                <div class="favorites-content">
+                    <h2><i class="fas fa-heart"></i> Your Favorite Missions</h2>
+                    <div id="favoritesList" class="favorites-list">
+                        <!-- Favorite missions will be displayed here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <div class="footer-top">
+                <div class="footer-col">
+                    <h4>QUICK LINKS</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>RESOURCES</h4>
+                    <ul>
+                        <li><a href="#">Educational Materials</a></li>
+                        <li><a href="#">Research Papers</a></li>
+                        <li><a href="#">Image Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>NEWSLETTER</h4>
+                    <div class="subscribe">
+                        <input type="email" placeholder="Your email">
+                        <button>Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-logo">
+                    <img src="logo.png" alt="Logo" class="img">
+                    <span>© 2025 Space Explorer</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#">FAQ</a>
+                    <a href="#">Support</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
 
 </html>
