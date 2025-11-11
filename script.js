@@ -467,7 +467,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const message = document.getElementById('message');
         const subject = document.querySelector('input[name="subject"]:checked');
 
-        const nameRegex = /^[a-zA-ZÀ-ÿ' -]{2,}$/;
+        const nameRegex = /^[a-zA-ZÀ-ÿ' -]{3,}$/;
         const emailRegex = /^[\w-.]+@[\w-]+\.[a-z]{2,}$/i;
         const phoneRegex = /^\+?\d{9,15}$/;
 
